@@ -1,0 +1,28 @@
+﻿using OrderService.Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OrderService.Repository
+{
+    public interface IOrderRepository<T>
+    {
+        Task<List<T>> getAllItem();
+        //T getSingleItem(string a, string b);
+
+        Task<T> getSingleItem(long id);
+
+        //Task<long> insertSingleItem(T t);
+        //Task<T> updateSingleItem(T t);
+        //void deleteSingleItem(long id);
+
+        ////Task<OrderStatus> GetOrderStatus(long id);
+
+
+        //Task<List<T>> getAllItemforUser(long id);
+        //Task<List<T>> getAllItemforProduct(long id);
+        //Task<List<T>> getAllItemforSeller(long id);
+    }
+}

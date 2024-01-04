@@ -1,0 +1,6 @@
+@DaffEcommerceWebAPI_dump_HostAddress = http://localhost:5272
+
+GET {{DaffEcommerceWebAPI_dump_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

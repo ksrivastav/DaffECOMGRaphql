@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9h8QjS+SvfJjfmHOPtyCwSUhLkiyZHW9km8NJz+Q2W4=",
+  "Source": "DaffMSAPIGateway",
+  "BasePath": "_content/DaffMSAPIGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

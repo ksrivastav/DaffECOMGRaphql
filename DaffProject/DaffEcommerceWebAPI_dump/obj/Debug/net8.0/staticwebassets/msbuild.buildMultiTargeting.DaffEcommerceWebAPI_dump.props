@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DaffEcommerceWebAPI_dump.props" />
+</Project>

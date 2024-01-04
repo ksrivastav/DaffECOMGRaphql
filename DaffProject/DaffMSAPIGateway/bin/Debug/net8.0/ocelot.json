@@ -1,0 +1,77 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7050"
+  },
+  "Routes": [
+    //Product getAllProduct
+    {
+      "UpstreamPathTemplate": "/DaffMS/v1/getAllProducts}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/v1/Product/getAllProduct}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7213
+        }
+      ]
+    }, //Product getProductDetails v1
+    {
+      "UpstreamPathTemplate": "/DaffMS/v1/getProductDetail/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/v1/Product/getProductDetail/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7213
+        }
+      ]
+    }, //Product getProductDetails v2
+    {
+      "UpstreamPathTemplate": "/DaffMS/v2/getProductDetail/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/v2/Product/getProductDetail/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7213
+        }
+      ]
+    }, //Order get ALl
+    {
+      "UpstreamPathTemplate": "/DaffMS/getAllOrders",
+      "UpstreamHttpMethod": [ "Get", "Delete", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/Order/getAllOrders",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7132
+        }
+      ]
+    },
+    //Order get Order Details
+    {
+      "UpstreamPathTemplate": "/DaffMS/getOrderDetail/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/Order/getOrderDetail/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7132
+        }
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 10,
+        "Limit": 3
+      }
+    }
+
+  ]
+}
